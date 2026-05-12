@@ -24,8 +24,8 @@ export default function GioielleriaPage() {
         description="Un distretto dedicato al mondo orafo, tra gioiellerie, laboratori a vista, brand emergenti e artigianato qualificato."
         videoSrc="/videos/gioielleria-background.mp4"
         links={[
-          { label: "DIVENTA MANAGER", href: "#" },
-          { label: "APRI UNO STORE", href: "#" }
+          { label: "DIVENTA MANAGER", href: "/diventa-manager" },
+          { label: "APRI UNO STORE", href: "/entra-nel-polo" }
         ]}
       />
 
@@ -45,8 +45,8 @@ export default function GioielleriaPage() {
         description="Gioiellerie, artigiani, designer e marchi emergenti trovano uno spazio pensato per raccontare qualità, competenza e valore."
         imageSrc="/images/gioielleria-laboratori.jpg"
         links={[
-          { label: "DIVENTA MANAGER", href: "#" },
-          { label: "APRI UNO STORE", href: "#" }
+          { label: "DIVENTA MANAGER", href: "/diventa-manager" },
+          { label: "APRI UNO STORE", href: "/entra-nel-polo" }
         ]}
       />
 

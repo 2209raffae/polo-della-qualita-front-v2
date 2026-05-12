@@ -17,12 +17,20 @@ export default function Header() {
 
       {/* NAV LINKS */}
       <nav className="hidden md:flex items-center gap-8 text-[11px] font-medium tracking-[0.2em] uppercase">
-        <div className="group relative cursor-pointer hover:text-gray-300 transition-colors">
+        <div className="group relative cursor-pointer hover:text-gray-300 transition-colors py-4">
           DISTRETTI <span className="ml-1 text-[8px] opacity-70">▼</span>
+          
+          {/* DROPDOWN MENU DISTRETTI */}
+          <div className="absolute top-full left-0 mt-0 w-48 bg-transparent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col pt-2">
+            <Link href="/distretti/gioielleria" className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white/70 hover:text-white transition-colors">
+              GIOIELLERIA
+            </Link>
+            {/* Gli altri distretti verranno aggiunti qui */}
+          </div>
         </div>
-        <div className="group relative cursor-pointer hover:text-gray-300 transition-colors">
+        <Link href="/entra-nel-polo" className="group relative cursor-pointer hover:text-gray-300 transition-colors">
           ENTRA NEL POLO <span className="ml-1 text-[8px] opacity-70">▼</span>
-        </div>
+        </Link>
         <div className="group relative cursor-pointer hover:text-gray-300 transition-colors">
           EVENTS <span className="ml-1 text-[8px] opacity-70">▼</span>
         </div>

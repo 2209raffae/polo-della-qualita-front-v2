@@ -23,8 +23,8 @@ export default function Home() {
         description="Un hub orafo aperto al pubblico, dove gioiellerie, laboratori, brand emergenti e artigianato qualificato si incontrano."
         videoSrc="/videos/gioielleria-background.mp4"
         links={[
-          { label: "DIVENTA MANAGER", href: "#" },
-          { label: "APRI UNO STORE", href: "#" }
+          { label: "DIVENTA MANAGER", href: "/diventa-manager" },
+          { label: "APRI UNO STORE", href: "/entra-nel-polo" }
         ]}
       />
 
@@ -36,8 +36,8 @@ export default function Home() {
         description="Una destinazione dedicata al matrimonio, con atelier, cerimonia, accessori, consulenze e servizi per il giorno più importante."
         videoSrc="/videos/sposi-background.mp4"
         links={[
-          { label: "DIVENTA MANAGER", href: "#" },
-          { label: "APRI UNO STORE", href: "#" }
+          { label: "DIVENTA MANAGER", href: "/diventa-manager" },
+          { label: "APRI UNO STORE", href: "/entra-nel-polo" }
         ]}
       />
 
@@ -49,8 +49,8 @@ export default function Home() {
         description="Food hall, laboratori a vista, degustazioni e scuole di cucina per trasformare il gusto in un'esperienza da vivere, condividere e scoprire."
         videoSrc="/videos/food-background.mp4"
         links={[
-          { label: "DIVENTA MANAGER", href: "#" },
-          { label: "APRI UNO STORE", href: "#" }
+          { label: "DIVENTA MANAGER", href: "/diventa-manager" },
+          { label: "APRI UNO STORE", href: "/entra-nel-polo" }
         ]}
       />
 
@@ -62,8 +62,8 @@ export default function Home() {
         description="Un distretto dedicato all'automotive d'eccellenza, tra supercar, presentazioni private, test drive ed eventi esclusivi."
         videoSrc="/videos/automotive-background.mp4"
         links={[
-          { label: "DIVENTA MANAGER", href: "#" },
-          { label: "APRI UNO STORE", href: "#" }
+          { label: "DIVENTA MANAGER", href: "/diventa-manager" },
+          { label: "APRI UNO STORE", href: "/entra-nel-polo" }
         ]}
       />
 
@@ -75,8 +75,8 @@ export default function Home() {
         description="Un distretto dedicato al mondo nautico, tra imbarcazioni, broker, servizi specializzati ed eventi legati al lifestyle del mare."
         videoSrc="/videos/nautica-background.mp4"
         links={[
-          { label: "DIVENTA MANAGER", href: "#" },
-          { label: "APRI UNO STORE", href: "#" }
+          { label: "DIVENTA MANAGER", href: "/diventa-manager" },
+          { label: "APRI UNO STORE", href: "/entra-nel-polo" }
         ]}
       />
 
@@ -88,8 +88,8 @@ export default function Home() {
         description="Moda, accessori, design e beauty selezionato in un percorso retail pensato per dialogare con l'identità del Polo."
         videoSrc="/videos/retail-background.mp4"
         links={[
-          { label: "DIVENTA MANAGER", href: "#" },
-          { label: "APRI UNO STORE", href: "#" }
+          { label: "DIVENTA MANAGER", href: "/diventa-manager" },
+          { label: "APRI UNO STORE", href: "/entra-nel-polo" }
         ]}
       />
 

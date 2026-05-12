@@ -35,7 +35,7 @@ export default function CallToActionSection() {
             <p className="text-base md:text-lg font-light leading-relaxed mb-10 text-gray-200">
               Guida lo sviluppo di un distretto e attiva nuove relazioni qualificate.
             </p>
-            <Link href="#" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase border-b border-white/50 group-hover:border-white pb-1 transition-colors">
+            <Link href="/diventa-manager" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase border-b border-white/50 group-hover:border-white pb-1 transition-colors">
               DIVENTA MANAGER
               <span className="transform transition-transform group-hover:translate-x-1">→</span>
             </Link>
@@ -69,7 +69,7 @@ export default function CallToActionSection() {
             <p className="text-base md:text-lg font-light leading-relaxed mb-10 text-gray-200">
               Porta il tuo brand nel Polo e valorizzalo in un contesto selezionato e riconoscibile.
             </p>
-            <Link href="#" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase border-b border-white/50 group-hover:border-white pb-1 transition-colors">
+            <Link href="/entra-nel-polo" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase border-b border-white/50 group-hover:border-white pb-1 transition-colors">
               APRI UNO STORE
               <span className="transform transition-transform group-hover:translate-x-1">→</span>
             </Link>

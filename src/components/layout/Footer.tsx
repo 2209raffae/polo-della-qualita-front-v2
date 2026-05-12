@@ -40,7 +40,7 @@ export default function Footer() {
         <div className="lg:col-span-3 flex flex-col pt-4">
           <h3 className="text-sm md:text-base font-bold tracking-widest uppercase mb-8">Distretti</h3>
           <ul className="flex flex-col gap-4">
-            <li><Link href="#gioielleria" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Gioielleria</Link></li>
+            <li><Link href="/distretti/gioielleria" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Gioielleria</Link></li>
             <li><Link href="#sposi" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Sposi</Link></li>
             <li><Link href="#food" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Food & Beverage</Link></li>
             <li><Link href="#automotive" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Automotive</Link></li>
@@ -53,7 +53,7 @@ export default function Footer() {
         <div className="lg:col-span-3 flex flex-col pt-4">
           <h3 className="text-sm md:text-base font-bold tracking-widest uppercase mb-8">Link Rapidi</h3>
           <ul className="flex flex-col gap-4">
-            <li><Link href="#" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Diventa Manager</Link></li>
+            <li><Link href="/diventa-manager" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Diventa Manager</Link></li>
             <li><Link href="#" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Proponi il tuo Brand</Link></li>
             <li><Link href="#" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Events</Link></li>
           </ul>

@@ -9,9 +9,10 @@ interface DistrettoHeroProps {
   description: string;
   videoSrc: string;
   links?: { label: string; href: string }[];
+  hideBottomBar?: boolean;
 }
 
-export default function DistrettoHero({ breadcrumbs, title, description, videoSrc, links }: DistrettoHeroProps) {
+export default function DistrettoHero({ breadcrumbs, title, description, videoSrc, links, hideBottomBar = false }: DistrettoHeroProps) {
   return (
     <section className="relative w-full h-screen flex items-center bg-black overflow-hidden">
       {/* BACKGROUND VIDEO */}
@@ -50,7 +51,12 @@ export default function DistrettoHero({ breadcrumbs, title, description, videoSr
 
           {/* Title */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-wide text-white mb-6">
-            {title}
+            {title.split('\n').map((line, i) => (
+              <span key={i}>
+                {line}
+                {i < title.split('\n').length - 1 && <br />}
+              </span>
+            ))}
           </h1>
 
           {/* Description */}
@@ -77,14 +83,16 @@ export default function DistrettoHero({ breadcrumbs, title, description, videoSr
       </div>
 
       {/* BARRA INFERIORE FISSATA IN BASSO AL CENTRO */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex w-[400px] max-w-[90%] z-20">
-        <Link href="#" className="flex-1 bg-[#9c9c9c] hover:bg-[#858585] text-black text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase py-4 text-center transition-colors border-r border-black/10">
-          <span className="border-b border-black pb-0.5">DIVENTA MANAGER</span>
-        </Link>
-        <Link href="#" className="flex-1 bg-[#9c9c9c] hover:bg-[#858585] text-black text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase py-4 text-center transition-colors">
-          <span className="border-b border-black pb-0.5">APRI UNO STORE</span>
-        </Link>
-      </div>
+      {!hideBottomBar && (
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex w-[400px] max-w-[90%] z-20">
+          <Link href="/diventa-manager" className="flex-1 bg-[#9c9c9c] hover:bg-[#858585] text-black text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase py-4 text-center transition-colors border-r border-black/10">
+            <span className="border-b border-black pb-0.5">DIVENTA MANAGER</span>
+          </Link>
+          <Link href="/entra-nel-polo" className="flex-1 bg-[#9c9c9c] hover:bg-[#858585] text-black text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase py-4 text-center transition-colors">
+            <span className="border-b border-black pb-0.5">APRI UNO STORE</span>
+          </Link>
+        </div>
+      )}
     </section>
   );
 }
