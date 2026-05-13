@@ -41,7 +41,7 @@ export default function InteractiveMap() {
       </motion.div>
 
       {/* CONTROLS (Bottom Right) */}
-      <div className="absolute bottom-8 right-8 flex flex-col gap-4 z-40">
+      <div className="absolute bottom-4 right-4 md:bottom-8 md:right-8 flex flex-col gap-3 md:gap-4 z-40">
         
         {/* Levels */}
         <div className="flex flex-col bg-white rounded-md overflow-hidden shadow-lg border border-gray-100">

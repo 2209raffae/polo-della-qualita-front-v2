@@ -8,7 +8,7 @@ interface ContactSectionProps {
 
 export default function ContactSection({ title = "CONTATTACI" }: ContactSectionProps) {
   return (
-    <section className="w-full bg-[#f4f4f4] text-polo-dark py-24 md:py-32 px-8 md:px-16">
+    <section className="w-full bg-[#f4f4f4] text-polo-dark py-16 md:py-32 px-6 md:px-16">
       <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12">
         
         {/* COLONNA SINISTRA: Info Contatti */}
@@ -61,12 +61,12 @@ export default function ContactSection({ title = "CONTATTACI" }: ContactSectionP
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white p-8 md:p-14 lg:p-20 w-full shadow-sm"
+            className="bg-white p-6 md:p-14 lg:p-20 w-full shadow-sm"
           >
             <form className="flex flex-col gap-12">
               
               {/* Row 1: Email & Telefono */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
                 <div className="flex flex-col">
                   <label className="text-[9px] font-bold tracking-[0.15em] uppercase text-black mb-3">Email</label>
                   <input 
@@ -95,7 +95,7 @@ export default function ContactSection({ title = "CONTATTACI" }: ContactSectionP
               </div>
 
               {/* Row 2: Nome & Cognome */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
                 <div className="flex flex-col">
                   <label className="text-[9px] font-bold tracking-[0.15em] uppercase text-black mb-3">Nome</label>
                   <input 
@@ -115,7 +115,7 @@ export default function ContactSection({ title = "CONTATTACI" }: ContactSectionP
               </div>
 
               {/* Row 3: Come possiamo aiutarti & Preferenze di contatto */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
                 <div className="flex flex-col relative">
                   <label className="text-[9px] font-bold tracking-[0.15em] uppercase text-black mb-3">Come possiamo aiutarti</label>
                   <div className="relative border-b border-gray-200 pb-3 focus-within:border-black transition-colors">

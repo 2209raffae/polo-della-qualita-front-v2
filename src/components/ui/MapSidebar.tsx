@@ -20,7 +20,7 @@ export default function MapSidebar() {
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="absolute top-28 left-8 md:left-16 z-40 w-full max-w-[320px] bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-6 flex flex-col max-h-[calc(100vh-160px)] overflow-y-auto"
+      className="absolute top-24 md:top-28 left-4 right-4 md:right-auto md:left-16 z-40 w-[calc(100%-2rem)] md:w-full md:max-w-[320px] bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-5 md:p-6 flex flex-col max-h-[calc(100vh-140px)] overflow-y-auto"
     >
       {/* SEARCH BAR */}
       <div className="relative w-full mb-6">

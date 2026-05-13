@@ -8,7 +8,7 @@ interface EventContactSectionProps {
 
 export default function EventContactSection({ title = "PROPONI\nEVENTO" }: EventContactSectionProps) {
   return (
-    <section id="proponi-evento" className="w-full bg-[#f4f4f4] text-polo-dark py-24 md:py-32 px-8 md:px-16">
+    <section id="proponi-evento" className="w-full bg-[#f4f4f4] text-polo-dark py-16 md:py-32 px-6 md:px-16">
       <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12">
         
         {/* COLONNA SINISTRA: Info Contatti */}
@@ -66,7 +66,7 @@ export default function EventContactSection({ title = "PROPONI\nEVENTO" }: Event
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white p-8 md:p-14 lg:p-20 w-full shadow-sm"
+            className="bg-white p-6 md:p-14 lg:p-20 w-full shadow-sm"
           >
             <form className="flex flex-col gap-12">
               

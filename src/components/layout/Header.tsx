@@ -1,11 +1,23 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Close menu on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [pathname]);
+
   return (
-    <header className="absolute top-0 left-0 w-full z-50 py-6 px-8 md:px-16 flex items-center justify-between text-white">
+    <header className="absolute top-0 left-0 w-full z-50 py-4 md:py-6 px-6 md:px-12 lg:px-16 flex items-center justify-between text-white">
       {/* LOGO UFFICIALE */}
-      <Link href="/" className="relative block w-48 h-12 md:w-56 md:h-14">
+      <Link href="/" className="relative block w-40 h-10 md:w-56 md:h-14 z-50">
         <Image 
           src="/images/logo.png" 
           alt="Polo della Qualità" 
@@ -15,17 +27,16 @@ export default function Header() {
         />
       </Link>
 
-      {/* NAV LINKS */}
-      <nav className="hidden md:flex items-center gap-8 text-[11px] font-medium tracking-[0.2em] uppercase">
+      {/* NAV LINKS DESKTOP */}
+      <nav className="hidden lg:flex items-center gap-8 text-[11px] font-medium tracking-[0.2em] uppercase">
         <div className="group relative cursor-pointer hover:text-gray-300 transition-colors py-4">
           DISTRETTI <span className="ml-1 text-[8px] opacity-70">▼</span>
           
           {/* DROPDOWN MENU DISTRETTI */}
-          <div className="absolute top-full left-0 mt-0 w-48 bg-transparent opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col pt-2">
-            <Link href="/distretti/gioielleria" className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white/70 hover:text-white transition-colors">
+          <div className="absolute top-full left-0 mt-0 w-48 bg-black/90 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col pt-2 pb-4 px-4 shadow-xl">
+            <Link href="/distretti/gioielleria" className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white/70 hover:text-white transition-colors py-2">
               GIOIELLERIA
             </Link>
-            {/* Gli altri distretti verranno aggiunti qui */}
           </div>
         </div>
         <Link href="/entra-nel-polo" className="group relative cursor-pointer hover:text-gray-300 transition-colors">
@@ -40,11 +51,32 @@ export default function Header() {
       </nav>
 
       {/* Mobile Menu Button (Hamburger) */}
-      <button className="md:hidden flex flex-col gap-1.5 z-50">
-        <span className="w-6 h-[2px] bg-white"></span>
-        <span className="w-6 h-[2px] bg-white"></span>
-        <span className="w-6 h-[2px] bg-white"></span>
+      <button 
+        className="lg:hidden flex flex-col gap-1.5 z-50 p-2"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+        <span className={`w-6 h-[2px] bg-white transition-transform duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-[8px]' : ''}`}></span>
+        <span className={`w-6 h-[2px] bg-white transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+        <span className={`w-6 h-[2px] bg-white transition-transform duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-[8px]' : ''}`}></span>
       </button>
+
+      {/* MOBILE MENU OVERLAY */}
+      <div className={`fixed inset-0 bg-black z-40 transition-transform duration-500 ease-in-out lg:hidden flex flex-col justify-center items-center ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        <nav className="flex flex-col items-center gap-10 text-lg font-medium tracking-[0.2em] uppercase">
+          <Link href="/distretti/gioielleria" className="hover:text-gray-300 transition-colors">
+            DISTRETTI
+          </Link>
+          <Link href="/entra-nel-polo" className="hover:text-gray-300 transition-colors">
+            ENTRA NEL POLO
+          </Link>
+          <Link href="/eventi" className="hover:text-gray-300 transition-colors">
+            EVENTS
+          </Link>
+          <Link href="/map" className="hover:text-gray-300 transition-colors">
+            MAPPA
+          </Link>
+        </nav>
+      </div>
     </header>
   );
 }
