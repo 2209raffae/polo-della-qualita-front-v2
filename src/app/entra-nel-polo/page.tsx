@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import DistrettoHero from "@/components/ui/DistrettoHero";
 import SplitFeatureSection from "@/components/ui/SplitFeatureSection";
 import TextListSection from "@/components/ui/TextListSection";
+import ContactSection from "@/components/ui/ContactSection";
 import Footer from "@/components/layout/Footer";
 
 export default function EntraNelPoloPage() {
@@ -20,28 +21,30 @@ export default function EntraNelPoloPage() {
         description="Uno spazio commerciale ed esperienziale pensato per accogliere brand, attività, showroom, operatori e partner selezionati."
         videoSrc="/videos/entra-nel-polo-background.mp4"
         links={[
-          { label: "CANDIDATI ORA", href: "#" },
-          { label: "SCOPRI DI PIÙ", href: "#" }
+          { label: "CANDIDATI ORA", href: "#candidati" },
+          { label: "SCOPRI DI PIÙ", href: "#scopri-di-piu" }
         ]}
         hideBottomBar={true}
       />
 
       {/* SEZIONE NUOVA DESTINAZIONE */}
-      <SplitFeatureSection 
-        title={"UNA NUOVA\nDESTINAZIONE PER\nATTIVITÀ\nSELEZIONATE"}
-        description="Il Polo della Qualità non vuole replicare il modello del centro commerciale tradizionale.
+      <div id="scopri-di-piu">
+        <SplitFeatureSection 
+          title={"UNA NUOVA\nDESTINAZIONE PER\nATTIVITÀ\nSELEZIONATE"}
+          description="Il Polo della Qualità non vuole replicare il modello del centro commerciale tradizionale.
 
 L'obiettivo è creare un sistema di distretti verticali, ciascuno con una propria identità, una propria offerta e una propria capacità di attrarre pubblico, operatori e opportunità."
-        imageSrc="/images/entra-nel-polo-destinazione.jpg"
-        imageAlt="Vetrina di un'attività selezionata"
-        imagePosition="right"
-        link={{ label: "CANDIDATI ORA", href: "#" }}
-      />
+          imageSrc="/images/entra-nel-polo-destinazione.jpg"
+          imageAlt="Vetrina di un'attività selezionata"
+          imagePosition="right"
+          link={{ label: "CANDIDATI ORA", href: "#candidati" }}
+        />
+      </div>
 
       {/* SEZIONE PERCHÈ ENTRARE NEL POLO */}
       <TextListSection 
         title={"PERCHÉ ENTRARE NEL\nPOLO"}
-        link={{ label: "CANDIDATI ORA", href: "#" }}
+        link={{ label: "CANDIDATI ORA", href: "#candidati" }}
         listItems={[
           "un contesto commerciale riconoscibile;",
           "una struttura organizzata per distretti;",
@@ -52,6 +55,11 @@ L'obiettivo è creare un sistema di distretti verticali, ciascuno con una propri
           "supporto nella valorizzazione dell'attività all'interno del sistema Polo."
         ]}
       />
+
+      {/* SEZIONE CONTATTI / CANDIDATI */}
+      <div id="candidati">
+        <ContactSection title="CANDIDATI" />
+      </div>
 
       {/* FOOTER GLOBALE */}
       <Footer />

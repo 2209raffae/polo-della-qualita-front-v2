@@ -31,9 +31,9 @@ export default function Header() {
         <Link href="/entra-nel-polo" className="group relative cursor-pointer hover:text-gray-300 transition-colors">
           ENTRA NEL POLO <span className="ml-1 text-[8px] opacity-70">▼</span>
         </Link>
-        <div className="group relative cursor-pointer hover:text-gray-300 transition-colors">
+        <Link href="/eventi" className="group relative cursor-pointer hover:text-gray-300 transition-colors">
           EVENTS <span className="ml-1 text-[8px] opacity-70">▼</span>
-        </div>
+        </Link>
         <Link href="/map" className="hover:text-gray-300 transition-colors">
           MAPPA
         </Link>

@@ -54,8 +54,8 @@ export default function Footer() {
           <h3 className="text-sm md:text-base font-bold tracking-widest uppercase mb-8">Link Rapidi</h3>
           <ul className="flex flex-col gap-4">
             <li><Link href="/diventa-manager" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Diventa Manager</Link></li>
-            <li><Link href="#" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Proponi il tuo Brand</Link></li>
-            <li><Link href="#" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Events</Link></li>
+            <li><Link href="/entra-nel-polo" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Proponi il tuo Brand</Link></li>
+            <li><Link href="/eventi" className="text-xs font-light text-gray-300 hover:text-white uppercase tracking-wider border-b border-gray-600 hover:border-white pb-1 transition-colors inline-block">Events</Link></li>
           </ul>
         </div>
 
