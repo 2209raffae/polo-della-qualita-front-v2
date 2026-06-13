@@ -19,7 +19,7 @@ export default function DiventaManagerPage() {
         ]}
         title="DIVENTA MANAGER DI DISTRETTO"
         description="Partecipa allo sviluppo del Polo della Qualità e contribuisci alla crescita dei suoi distretti tematici."
-        videoSrc="/videos/diventa-manager-bg.mp4"
+        imageSrc="/images/diventa-manager-bg.png"
         links={[
           { label: "CANDIDATI ORA", href: "#" },
           { label: "SCOPRI DI PIÙ", href: "#" }

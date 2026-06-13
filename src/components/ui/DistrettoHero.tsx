@@ -7,24 +7,33 @@ interface DistrettoHeroProps {
   breadcrumbs: { label: string; href: string }[];
   title: string;
   description: string;
-  videoSrc: string;
+  videoSrc?: string;
+  imageSrc?: string;
   links?: { label: string; href: string }[];
   hideBottomBar?: boolean;
 }
 
-export default function DistrettoHero({ breadcrumbs, title, description, videoSrc, links, hideBottomBar = false }: DistrettoHeroProps) {
+export default function DistrettoHero({ breadcrumbs, title, description, videoSrc, imageSrc, links, hideBottomBar = false }: DistrettoHeroProps) {
   return (
     <section className="relative w-full h-screen flex items-center bg-black overflow-hidden">
-      {/* BACKGROUND VIDEO */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src={videoSrc} type="video/mp4" />
-      </video>
+      {/* BACKGROUND MEDIA */}
+      {videoSrc ? (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+      ) : imageSrc ? (
+        <img
+          src={imageSrc}
+          alt={title}
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+      ) : null}
 
       {/* OVERLAY SFUMATO PER LEGGIBILITÀ */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent z-0"></div>

@@ -19,7 +19,7 @@ export default function EntraNelPoloPage() {
         ]}
         title={"APRI UNO STORE\nAL POLO DELLA\nQUALITÀ"}
         description="Uno spazio commerciale ed esperienziale pensato per accogliere brand, attività, showroom, operatori e partner selezionati."
-        videoSrc="/videos/entra-nel-polo-background.mp4"
+        imageSrc="/images/entra-nel-polo-background.png"
         links={[
           { label: "CANDIDATI ORA", href: "#candidati" },
           { label: "SCOPRI DI PIÙ", href: "#scopri-di-piu" }
