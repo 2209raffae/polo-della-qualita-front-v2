@@ -1,0 +1,92 @@
+
+> polo-della-qualita-front-v2@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.3:3000
+✓ Ready in 1532ms
+
+ GET / 200 in 516ms (next.js: 243ms, application-code: 273ms)
+ GET / 200 in 127ms (next.js: 8ms, application-code: 119ms)
+ GET /distretti/gioielleria 200 in 82ms (next.js: 41ms, application-code: 41ms)
+ GET / 200 in 24ms (next.js: 4ms, application-code: 19ms)
+✓ Compiled in 767ms
+ GET / 200 in 1038ms (next.js: 824ms, application-code: 214ms)
+ GET / 200 in 167ms (next.js: 5ms, application-code: 162ms)
+ GET / 200 in 164ms (next.js: 9ms, application-code: 156ms)
+ GET / 200 in 164ms (next.js: 30ms, application-code: 134ms)
+ GET / 200 in 164ms (next.js: 59ms, application-code: 105ms)
+ GET / 200 in 187ms (next.js: 85ms, application-code: 102ms)
+ GET / 200 in 192ms (next.js: 7ms, application-code: 186ms)
+ GET / 200 in 165ms (next.js: 6ms, application-code: 158ms)
+ GET / 200 in 169ms (next.js: 32ms, application-code: 136ms)
+ GET / 200 in 171ms (next.js: 6ms, application-code: 164ms)
+ GET / 200 in 192ms (next.js: 65ms, application-code: 127ms)
+ GET / 200 in 133ms (next.js: 37ms, application-code: 96ms)
+ GET / 200 in 198ms (next.js: 7ms, application-code: 191ms)
+ GET / 200 in 160ms (next.js: 7ms, application-code: 154ms)
+ GET / 200 in 154ms (next.js: 5ms, application-code: 150ms)
+ GET / 200 in 155ms (next.js: 31ms, application-code: 123ms)
+ GET / 200 in 130ms (next.js: 36ms, application-code: 94ms)
+ GET / 200 in 100ms (next.js: 45ms, application-code: 54ms)
+ GET / 200 in 26ms (next.js: 4ms, application-code: 23ms)
+✓ Compiled in 411ms
+✓ Compiled in 674ms
+ GET / 200 in 1467ms (next.js: 405ms, application-code: 1063ms)
+ GET / 200 in 749ms (next.js: 82ms, application-code: 668ms)
+ GET / 200 in 517ms (next.js: 8ms, application-code: 510ms)
+ GET / 200 in 515ms (next.js: 349ms, application-code: 166ms)
+ GET / 200 in 518ms (next.js: 136ms, application-code: 382ms)
+ GET / 200 in 518ms (next.js: 234ms, application-code: 284ms)
+ GET /diventa-manager 200 in 118ms (next.js: 76ms, application-code: 42ms)
+ GET /scopri-il-polo 200 in 1236ms (next.js: 1208ms, application-code: 28ms)
+ GET / 200 in 11ms (next.js: 3ms, application-code: 8ms)
+ GET /diventa-manager 200 in 25ms (next.js: 3ms, application-code: 21ms)
+ GET /diventa-manager 200 in 34ms (next.js: 4ms, application-code: 30ms)
+ GET / 200 in 493ms (next.js: 4ms, application-code: 489ms)
+ GET /scopri-il-polo 200 in 35ms (next.js: 9ms, application-code: 26ms)
+ GET / 200 in 262ms (next.js: 3ms, application-code: 259ms)
+ GET / 200 in 286ms (next.js: 6ms, application-code: 281ms)
+ GET / 200 in 272ms (next.js: 5ms, application-code: 266ms)
+ GET / 200 in 278ms (next.js: 3ms, application-code: 275ms)
+ GET /entra-nel-polo 200 in 62ms (next.js: 41ms, application-code: 21ms)
+ GET /entra-nel-polo 200 in 23ms (next.js: 3ms, application-code: 20ms)
+ GET /entra-nel-polo 200 in 30ms (next.js: 5ms, application-code: 24ms)
+ GET /scopri-il-polo 200 in 22ms (next.js: 3ms, application-code: 19ms)
+✓ Compiled in 376ms
+ GET /scopri-il-polo 200 in 353ms (next.js: 147ms, application-code: 206ms)
+ GET /scopri-il-polo 200 in 149ms (next.js: 6ms, application-code: 143ms)
+ GET /scopri-il-polo 200 in 101ms (next.js: 5ms, application-code: 97ms)
+ GET /scopri-il-polo 200 in 101ms (next.js: 27ms, application-code: 75ms)
+ GET /scopri-il-polo 200 in 101ms (next.js: 72ms, application-code: 29ms)
+ GET /scopri-il-polo 200 in 102ms (next.js: 47ms, application-code: 55ms)
+✓ Compiled in 248ms
+ GET /scopri-il-polo 200 in 566ms (next.js: 178ms, application-code: 388ms)
+✓ Compiled in 92ms
+ GET /scopri-il-polo 200 in 251ms (next.js: 151ms, application-code: 101ms)
+ GET /scopri-il-polo 200 in 54ms (next.js: 5ms, application-code: 48ms)
+ GET / 200 in 559ms (next.js: 129ms, application-code: 430ms)
+ GET / 200 in 302ms (next.js: 3ms, application-code: 299ms)
+ GET / 200 in 352ms (next.js: 3ms, application-code: 349ms)
+ GET /scopri-il-polo 200 in 202ms (next.js: 3ms, application-code: 198ms)
+✓ Compiled in 50ms
+ GET /scopri-il-polo 200 in 173ms (next.js: 110ms, application-code: 62ms)
+ GET /scopri-il-polo 200 in 26ms (next.js: 3ms, application-code: 23ms)
+✓ Compiled in 82ms
+ GET /scopri-il-polo 200 in 238ms (next.js: 101ms, application-code: 137ms)
+ GET /scopri-il-polo 200 in 101ms (next.js: 5ms, application-code: 96ms)
+ GET /scopri-il-polo 200 in 85ms (next.js: 4ms, application-code: 81ms)
+ GET /scopri-il-polo 200 in 85ms (next.js: 22ms, application-code: 63ms)
+ GET /scopri-il-polo 200 in 85ms (next.js: 41ms, application-code: 45ms)
+ GET /scopri-il-polo 200 in 24ms (next.js: 4ms, application-code: 20ms)
+ GET /scopri-il-polo 200 in 210ms (next.js: 3ms, application-code: 207ms)
+ GET / 200 in 490ms (next.js: 102ms, application-code: 388ms)
+ GET /scopri-il-polo 200 in 18ms (next.js: 3ms, application-code: 16ms)
+✓ Compiled in 49ms
+ GET /scopri-il-polo 200 in 174ms (next.js: 106ms, application-code: 68ms)
+ GET /scopri-il-polo 200 in 22ms (next.js: 3ms, application-code: 20ms)
+ GET /scopri-il-polo 200 in 195ms (next.js: 4ms, application-code: 191ms)
+ GET /scopri-il-polo 200 in 10ms (next.js: 3ms, application-code: 7ms)
+ GET /scopri-il-polo 200 in 8ms (next.js: 3ms, application-code: 5ms)
+ GET / 200 in 147ms (next.js: 14ms, application-code: 133ms)

@@ -38,8 +38,8 @@ export default function EventContactSection({ title = "PROPONI\nEVENTO" }: Event
               Ufficio
             </h3>
             <p className="text-sm md:text-base font-light text-gray-800 leading-relaxed">
-              Via dell'Innovazione 1<br />
-              20126 Milano, Italy
+              <a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x133baabdffec7d55:0x4261a27b546163f5?sa=X&ved=1t:8290&ictx=111" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">Agglomerato, Zona Industriale ASI,<br />
+              81025 Marcianise CE</a>
             </p>
           </motion.div>
 
@@ -54,7 +54,7 @@ export default function EventContactSection({ title = "PROPONI\nEVENTO" }: Event
             </h3>
             <p className="text-sm md:text-base font-light text-gray-800 leading-relaxed">
               info@polodellaqualita.com<br />
-              +39 02 1234 567
+              <a href="https://www.google.com/search?gs_ssp=eJzj4tFP1zcsKCkrMU8zLTdgtFI1qDA0Nk5KTExKSUtLTTZPMTW1MqgwMTIzTDQyTzI1MTM0M04z9RIuyM_JV0hJzclJVCgsTczJLDm8AAA8Kxdx&q=polo+della+qualit%C3%A0&oq=polo+de&gs_lcrp=EgZjaHJvbWUqDwgBEC4YJxivARjHARiOBTIGCAAQRRg5Mg8IARAuGCcYrwEYxwEYjgUyEAgCEC4YrwEYgAQYjgUyDQgDEC4YrwEYxwEYgAQyDQgEEC4YxwEY0QMYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgzMzI5ajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#" target="_blank" rel="noopener noreferrer" className="hover:text-black transition-colors">0823 609615</a>
             </p>
           </motion.div>
         </div>
