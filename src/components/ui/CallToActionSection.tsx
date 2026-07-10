@@ -43,11 +43,11 @@ export default function CallToActionSection() {
         </div>
       </div>
 
-      {/* LATO DESTRO: APRI UNO STORE */}
+      {/* LATO DESTRO: PROPONI IL TUO PROGETTO */}
       <div className="relative w-full md:w-1/2 h-[500px] md:h-full group overflow-hidden cursor-pointer">
         <Image 
           src="/images/store.jpg" 
-          alt="Apri uno Store" 
+          alt="Proponi il tuo progetto" 
           fill 
           className="object-cover object-center transition-transform duration-[1.5s] ease-out group-hover:scale-105"
         />
@@ -62,15 +62,15 @@ export default function CallToActionSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-md"
           >
-            <p className="text-lg md:text-xl font-light mb-1">Opportunità per brand</p>
+            <p className="text-lg md:text-xl font-light mb-1">Opportunità per progetti</p>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wide leading-tight mb-6">
-              APRI UNO<br/>STORE
+              PROPONI IL<br/>TUO PROGETTO
             </h2>
             <p className="text-base md:text-lg font-light leading-relaxed mb-10 text-gray-200">
-              Porta il tuo brand nel Polo e valorizzalo in un contesto selezionato e riconoscibile.
+              Proponi il tuo progetto e valorizzalo in un ecosistema selezionato e riconoscibile.
             </p>
             <Link href="/entra-nel-polo" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase border-b border-white/50 group-hover:border-white pb-1 transition-colors">
-              APRI UNO STORE
+              PROPONI IL TUO PROGETTO
               <span className="transform transition-transform group-hover:translate-x-1">→</span>
             </Link>
           </motion.div>
@@ -80,3 +80,4 @@ export default function CallToActionSection() {
     </section>
   );
 }
+

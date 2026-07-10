@@ -90,3 +90,5 @@
  GET /scopri-il-polo 200 in 10ms (next.js: 3ms, application-code: 7ms)
  GET /scopri-il-polo 200 in 8ms (next.js: 3ms, application-code: 5ms)
  GET / 200 in 147ms (next.js: 14ms, application-code: 133ms)
+ GET / 200 in 1602ms (next.js: 306ms, application-code: 1297ms)
+[?25h

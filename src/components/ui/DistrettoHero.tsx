@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 interface DistrettoHeroProps {
   breadcrumbs: { label: string; href: string }[];
@@ -28,10 +29,12 @@ export default function DistrettoHero({ breadcrumbs, title, description, videoSr
           <source src={videoSrc} type="video/mp4" />
         </video>
       ) : imageSrc ? (
-        <img
+        <Image
           src={imageSrc}
           alt={title}
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          fill
+          sizes="100vw"
+          className="object-cover z-0"
         />
       ) : null}
 
@@ -98,10 +101,14 @@ export default function DistrettoHero({ breadcrumbs, title, description, videoSr
             <span className="border-b border-black pb-0.5">DIVENTA MANAGER</span>
           </Link>
           <Link href="/entra-nel-polo" className="flex-1 bg-[#9c9c9c] hover:bg-[#858585] text-black text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase py-4 text-center transition-colors">
-            <span className="border-b border-black pb-0.5">APRI UNO STORE</span>
+            <span className="border-b border-black pb-0.5">PROPONI IL TUO PROGETTO</span>
           </Link>
         </div>
       )}
     </section>
   );
 }
+
+
+
+

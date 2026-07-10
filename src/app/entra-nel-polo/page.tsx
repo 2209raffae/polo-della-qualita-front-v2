@@ -8,17 +8,15 @@ import Footer from "@/components/layout/Footer";
 export default function EntraNelPoloPage() {
   return (
     <main className="relative min-h-screen bg-polo-dark">
-      {/* HEADER GLOBALE TRASPARENTE */}
       <Header />
-      
-      {/* HERO SECTION SPECIFICO PER ENTRA NEL POLO / APRI UNO STORE */}
-      <DistrettoHero 
+
+      <DistrettoHero
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Apri uno Store", href: "/entra-nel-polo" }
+          { label: "Diventa Partner", href: "/entra-nel-polo" }
         ]}
-        title={"APRI UNO STORE\nAL POLO DELLA\nQUALITÀ"}
-        description="Uno spazio commerciale ed esperienziale pensato per accogliere brand, attività, showroom, operatori e partner selezionati."
+        title={"PARTECIPA AL NUOVO\nECOSISTEMA PERMANENTE\nDEL POLO DELLA QUALITÀ"}
+        description="Uno spazio commerciale ed esperienziale pensato per accogliere brand, attività, showroom, operatori, progetti e partner selezionati."
         imageSrc="/images/entra-nel-polo-background.png"
         links={[
           { label: "CANDIDATI ORA", href: "#candidati" },
@@ -27,13 +25,10 @@ export default function EntraNelPoloPage() {
         hideBottomBar={true}
       />
 
-      {/* SEZIONE NUOVA DESTINAZIONE */}
       <div id="scopri-di-piu">
-        <SplitFeatureSection 
+        <SplitFeatureSection
           title={"UNA NUOVA\nDESTINAZIONE PER\nATTIVITÀ\nSELEZIONATE"}
-          description="Il Polo della Qualità non vuole replicare il modello del centro commerciale tradizionale.
-
-L'obiettivo è creare un sistema di distretti verticali, ciascuno con una propria identità, una propria offerta e una propria capacità di attrarre pubblico, operatori e opportunità."
+          description={"Il Polo della Qualità non vuole replicare il modello del centro commerciale tradizionale.\n\nL'obiettivo è creare un sistema di distretti verticali, ciascuno con una propria identità, una propria offerta e una propria capacità di attrarre pubblico, operatori e opportunità."}
           imageSrc="/images/entra-nel-polo-destinazione.jpg"
           imageAlt="Vetrina di un'attività selezionata"
           imagePosition="right"
@@ -41,8 +36,7 @@ L'obiettivo è creare un sistema di distretti verticali, ciascuno con una propri
         />
       </div>
 
-      {/* SEZIONE PERCHÈ ENTRARE NEL POLO */}
-      <TextListSection 
+      <TextListSection
         title={"PERCHÉ ENTRARE NEL\nPOLO"}
         link={{ label: "CANDIDATI ORA", href: "#candidati" }}
         listItems={[
@@ -56,13 +50,13 @@ L'obiettivo è creare un sistema di distretti verticali, ciascuno con una propri
         ]}
       />
 
-      {/* SEZIONE CONTATTI / CANDIDATI */}
       <div id="candidati">
-        <ContactSection title="CANDIDATI" />
+        <ContactSection title="ENTRA NEL POLO" crmTitle="ENTRA NEL POLO" />
       </div>
 
-      {/* FOOTER GLOBALE */}
       <Footer />
     </main>
   );
 }
+
+

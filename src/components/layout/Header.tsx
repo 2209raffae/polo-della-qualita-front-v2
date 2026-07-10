@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { districtNavLinks } from "@/data/districts";
 
 const navLinks = [
   { label: "ENTRA NEL POLO", href: "/entra-nel-polo", hasCaret: true },
@@ -19,7 +20,7 @@ export default function Header() {
       <Link href="/" className="relative block w-40 h-10 md:w-56 md:h-14 z-50">
         <Image
           src="/images/logo.png"
-          alt="Polo della Qualita"
+          alt="Polo della Qualità"
           fill
           sizes="(min-width: 768px) 224px, 160px"
           className="object-contain object-left"
@@ -29,19 +30,25 @@ export default function Header() {
 
       <nav className="hidden lg:flex items-center gap-8 text-[11px] font-medium tracking-[0.2em] uppercase">
         <div className="group relative cursor-pointer hover:text-gray-300 transition-colors py-4">
-          DISTRETTI <span className="ml-1 text-[8px] opacity-70">▼</span>
+          DISTRETTI <span className="ml-1 text-[8px] opacity-70">v</span>
 
-          <div className="absolute top-full left-0 mt-0 w-48 bg-black/90 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col pt-2 pb-4 px-4 shadow-xl">
-            <Link href="/distretti/gioielleria" className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white/70 hover:text-white transition-colors py-2">
-              GIOIELLERIA
-            </Link>
+          <div className="absolute top-full left-0 mt-0 w-72 bg-black/90 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 flex flex-col pt-2 pb-4 px-4 shadow-xl">
+            {districtNavLinks.map((district) => (
+              <Link
+                key={district.href}
+                href={district.href}
+                className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-white/70 hover:text-white transition-colors py-2"
+              >
+                {district.label}
+              </Link>
+            ))}
           </div>
         </div>
 
         {navLinks.map((link) => (
           <Link key={link.href} href={link.href} className="group relative cursor-pointer hover:text-gray-300 transition-colors">
             {link.label}
-            {link.hasCaret ? <span className="ml-1 text-[8px] opacity-70">▼</span> : null}
+            {link.hasCaret ? <span className="ml-1 text-[8px] opacity-70">v</span> : null}
           </Link>
         ))}
       </nav>
@@ -59,9 +66,19 @@ export default function Header() {
 
       <div className={`fixed inset-0 bg-black z-40 transition-transform duration-500 ease-in-out lg:hidden flex flex-col justify-center items-center ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
         <nav className="flex flex-col items-center gap-8 text-lg font-medium tracking-[0.2em] uppercase">
-          <Link href="/distretti/gioielleria" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300 transition-colors">
-            DISTRETTI
-          </Link>
+          <div className="flex flex-col items-center gap-4">
+            <span className="text-sm text-white/50">DISTRETTI</span>
+            {districtNavLinks.map((district) => (
+              <Link
+                key={district.href}
+                href={district.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="hover:text-gray-300 transition-colors"
+              >
+                {district.label}
+              </Link>
+            ))}
+          </div>
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-gray-300 transition-colors">
               {link.label}

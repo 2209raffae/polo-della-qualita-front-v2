@@ -37,7 +37,7 @@ export default function Hero() {
             Qualità
           </h1>
           <h2 className="text-lg md:text-2xl lg:text-3xl font-light uppercase tracking-[0.15em] text-gray-200 text-shadow-md">
-            L'Eccellenza ha un<br />
+            L&apos;Eccellenza ha un<br />
             nuovo indirizzo
           </h2>
         </motion.div>
@@ -66,3 +66,4 @@ export default function Hero() {
     </section>
   );
 }
+

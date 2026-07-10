@@ -87,7 +87,7 @@ export default function DoubleFeatureSection() {
                 Commercio, esperienza ed eventi si incontrano in un luogo pensato per valorizzare qualità, relazioni e nuove opportunità.
               </p>
               <Link href="#" className="inline-flex items-center gap-2 text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase border-b border-polo-dark pb-1 hover:text-gray-500 transition-colors group">
-                APRI UNO STORE
+                PROPONI IL TUO PROGETTO
                 <span className="transform transition-transform group-hover:translate-x-1">→</span>
               </Link>
             </div>
@@ -98,3 +98,4 @@ export default function DoubleFeatureSection() {
     </section>
   );
 }
+

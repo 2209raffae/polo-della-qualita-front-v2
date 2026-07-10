@@ -43,7 +43,7 @@ const distretti = [
   {
     num: "02",
     title: "Distretto Italiano del Gusto",
-    href: "/scopri-il-polo#food",
+    href: "/distretti/italiano-del-gusto",
     paragraphs: [
       "Il Distretto Italiano del Gusto sarà dedicato alla valorizzazione delle eccellenze agroalimentari italiane, delle produzioni territoriali, delle cantine, della ristorazione, delle esperienze enogastronomiche e delle filiere del Made in Italy alimentare.",
       "L'obiettivo è creare una piattaforma permanente capace di integrare esposizione fisica, vendita digitale, degustazioni, formazione, turismo, export e promozione dei prodotti italiani.",
@@ -54,7 +54,6 @@ const distretti = [
       "Cantine italiane",
       "Oleifici",
       "Caseifici",
-      "Salumifici",
       "Pasticceria artigianale",
       "Ristorazione",
       "Cucina regionale",
@@ -66,31 +65,8 @@ const distretti = [
   },
   {
     num: "03",
-    title: "Distretto Moda & Lusso",
-    href: "/distretti/gioielleria",
-    paragraphs: [
-      "Il Distretto Moda & Lusso sarà dedicato alle eccellenze italiane e internazionali nei settori moda, gioielleria, accessori, wedding, design, mobilità premium, nautica e retail omnicanale di qualità.",
-      "L'obiettivo è sviluppare un ambiente esclusivo, esperienziale e commerciale, capace di attrarre brand, operatori, clienti, partner e investitori interessati al mondo del lusso, dello stile e della qualità.",
-    ],
-    chips: [
-      "Gioielleria",
-      "Orologeria",
-      "Moda",
-      "Accessori",
-      "Pelletteria",
-      "Wedding District",
-      "Luxury Experience",
-      "Design",
-      "Arredamento Luxury",
-      "Automotive Premium",
-      "Nautica Premium",
-      "Retail omnicanale",
-    ],
-  },
-  {
-    num: "04",
     title: "Distretto Istruzione & Formazione",
-    href: "/entra-nel-polo",
+    href: "/distretti/istruzione-formazione",
     paragraphs: [
       "Il Distretto Istruzione & Formazione sarà dedicato allo sviluppo delle competenze, alla formazione professionale, alla formazione manageriale, alle academy, alle università private, alle scuole specialistiche e ai percorsi collegati all'innovazione digitale.",
       "L'obiettivo è creare un polo formativo permanente capace di collegare imprese, giovani, professionisti, università, startup e nuove competenze richieste dal mercato.",
@@ -105,15 +81,13 @@ const distretti = [
       "Scuole professionali",
       "Formazione continua",
       "Formazione manageriale",
-      "Ludoteche",
-      "Scuole dell'infanzia",
       "Incubazione startup",
     ],
   },
   {
-    num: "05",
+    num: "04",
     title: "Distretto Salute & Benessere",
-    href: "/entra-nel-polo",
+    href: "/distretti/salute-benessere",
     paragraphs: [
       "Il Distretto Salute & Benessere sarà dedicato alla qualità della vita, alla prevenzione, alla longevità, al wellness, alla medicina specialistica, alla salute digitale, alla nutrizione, al recupero fisico, alla medicina estetica e ai servizi sanitari avanzati.",
       "L'obiettivo è creare un ecosistema integrato per la persona, nel quale salute, benessere, prevenzione, tecnologia e stile di vita possano convivere in un modello organizzato e accessibile.",
@@ -125,23 +99,17 @@ const distretti = [
       "Lifestyle Club",
       "Nutrizione",
       "Medicina preventiva",
-      "Medicina rigenerativa",
       "Medicina estetica",
-      "Spa",
-      "Recovery",
       "Health Tech",
       "Telemedicina",
-      "Odontoiatria",
-      "Tricologia",
-      "Riabilitazione",
       "Diagnostica",
       "Poliambulatori specialistici",
     ],
   },
   {
-    num: "06",
+    num: "05",
     title: "Distretto Comunità Energetiche",
-    href: "/entra-nel-polo",
+    href: "/distretti/comunita-energetiche",
     paragraphs: [
       "Il Distretto Comunità Energetiche sarà dedicato alla sostenibilità energetica, alla produzione e condivisione di energia rinnovabile, all'efficientamento, alla mobilità elettrica e alla gestione intelligente dei consumi.",
       "L'obiettivo è rendere il Polo della Qualità un ecosistema energeticamente evoluto, capace di ridurre i costi, migliorare la sostenibilità ambientale e creare benefici per le attività aderenti e per il territorio.",
@@ -160,7 +128,6 @@ const distretti = [
     ],
   },
 ];
-
 const sections: DocumentSection[] = [
   {
     id: "inizio",
@@ -548,3 +515,4 @@ export default function FoundationHome() {
     </main>
   );
 }
+
