@@ -1,5 +1,5 @@
-import DistrictDetailPage from "@/components/ui/DistrictDetailPage";
+import DistrictConstructionBanner from "@/components/ui/DistrictConstructionBanner";
 
 export default function IstruzioneFormazionePage() {
-  return <DistrictDetailPage slug="istruzione-formazione" />;
+  return <DistrictConstructionBanner title="Distretto Istruzione & Formazione" />;
 }

@@ -158,10 +158,33 @@ export const districts: DistrictDetail[] = [
   },
 ];
 
-export const districtNavLinks = districts.map((district) => ({
-  label: district.menuLabel,
-  href: `/distretti/${district.slug}`,
-}));
+export const districtNavLinks = [
+  {
+    num: "01",
+    label: "Distretto Eventi & Intrattenimento",
+    href: "/eventi",
+  },
+  {
+    num: "02",
+    label: "Distretto Italiano del Gusto",
+    href: "/distretti/italiano-del-gusto",
+  },
+  {
+    num: "03",
+    label: "Distretto Istruzione & Formazione",
+    href: "/distretti/istruzione-formazione",
+  },
+  {
+    num: "04",
+    label: "Distretto Salute & Benessere",
+    href: "/distretti/salute-benessere",
+  },
+  {
+    num: "05",
+    label: "Distretto Comunità Energetiche",
+    href: "/distretti/comunita-energetiche",
+  },
+];
 
 export function getDistrict(slug: DistrictSlug) {
   return districts.find((district) => district.slug === slug);

@@ -1,5 +1,5 @@
-import DistrictDetailPage from "@/components/ui/DistrictDetailPage";
+import DistrictConstructionBanner from "@/components/ui/DistrictConstructionBanner";
 
 export default function ComunitaEnergetichePage() {
-  return <DistrictDetailPage slug="comunita-energetiche" />;
+  return <DistrictConstructionBanner title="Distretto Comunità Energetiche" />;
 }

@@ -1,5 +1,5 @@
-import DistrictDetailPage from "@/components/ui/DistrictDetailPage";
+import DistrictConstructionBanner from "@/components/ui/DistrictConstructionBanner";
 
 export default function ItalianoDelGustoPage() {
-  return <DistrictDetailPage slug="italiano-del-gusto" />;
+  return <DistrictConstructionBanner title="Distretto Italiano del Gusto" />;
 }

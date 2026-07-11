@@ -1,5 +1,5 @@
-import DistrictDetailPage from "@/components/ui/DistrictDetailPage";
+import DistrictConstructionBanner from "@/components/ui/DistrictConstructionBanner";
 
 export default function SaluteBenesserePage() {
-  return <DistrictDetailPage slug="salute-benessere" />;
+  return <DistrictConstructionBanner title="Distretto Salute & Benessere" />;
 }
