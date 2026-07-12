@@ -171,17 +171,22 @@ export const districtNavLinks = [
   },
   {
     num: "03",
+    label: "Distretto Moda & Lusso",
+    href: "/distretti/moda-lusso",
+  },
+  {
+    num: "04",
     label: "Distretto Istruzione & Formazione",
     href: "/distretti/istruzione-formazione",
   },
   {
-    num: "04",
+    num: "05",
     label: "Distretto Salute & Benessere",
     href: "/distretti/salute-benessere",
   },
   {
-    num: "05",
-    label: "Distretto Comunità Energetiche",
+    num: "06",
+    label: "Distretto Comunit\u00e0 Energetiche",
     href: "/distretti/comunita-energetiche",
   },
 ];
