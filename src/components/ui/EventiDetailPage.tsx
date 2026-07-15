@@ -17,7 +17,7 @@ export default function EventiDetailPage() {
         ]}
         title={"EVENTI AL POLO\nDELLA QUALIT\u00c0"}
         description="Uno spazio pensato per ospitare iniziative, temporary, open day, presentazioni, format esperienziali e appuntamenti dedicati ai distretti del Polo."
-        videoSrc="/videos/eventi-background.mp4"
+        imageSrc="/images/distretti/eventi-hero.png"
         links={[
           { label: "PROPONI EVENTO", href: "#proponi-evento" },
           { label: "SCOPRI DI PI\u00d9", href: "#scopri-di-piu" },

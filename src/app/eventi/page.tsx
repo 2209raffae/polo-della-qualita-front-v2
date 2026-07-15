@@ -1,5 +1,5 @@
-import DistrictConstructionBanner from "@/components/ui/DistrictConstructionBanner";
+import EventiDetailPage from "@/components/ui/EventiDetailPage";
 
 export default function EventiPage() {
-  return <DistrictConstructionBanner title="Distretto Eventi & Intrattenimento" />;
+  return <EventiDetailPage />;
 }
