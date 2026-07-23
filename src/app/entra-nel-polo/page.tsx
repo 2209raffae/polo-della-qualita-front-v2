@@ -4,6 +4,7 @@ import SplitFeatureSection from "@/components/ui/SplitFeatureSection";
 import TextListSection from "@/components/ui/TextListSection";
 import ContactSection from "@/components/ui/ContactSection";
 import Footer from "@/components/layout/Footer";
+import Image from "next/image";
 
 export default function EntraNelPoloPage() {
   return (
@@ -17,7 +18,7 @@ export default function EntraNelPoloPage() {
         ]}
         title={"PARTECIPA AL NUOVO\nECOSISTEMA PERMANENTE\nDEL POLO DELLA QUALITÀ"}
         description="Uno spazio commerciale ed esperienziale pensato per accogliere brand, attività, showroom, operatori, progetti e partner selezionati."
-        imageSrc="/images/entra-nel-polo-background.png"
+        imageSrc="/images/entra-nel-polo-hero.png"
         links={[
           { label: "CANDIDATI ORA", href: "#candidati" },
           { label: "SCOPRI DI PIÙ", href: "#scopri-di-piu" }
@@ -29,12 +30,26 @@ export default function EntraNelPoloPage() {
         <SplitFeatureSection
           title={"UNA NUOVA\nDESTINAZIONE PER\nATTIVITÀ\nSELEZIONATE"}
           description={"Il Polo della Qualità non vuole replicare il modello del centro commerciale tradizionale.\n\nL'obiettivo è creare un sistema di distretti verticali, ciascuno con una propria identità, una propria offerta e una propria capacità di attrarre pubblico, operatori e opportunità."}
-          imageSrc="/images/entra-nel-polo-destinazione.jpg"
-          imageAlt="Vetrina di un'attività selezionata"
+          imageSrc="/images/entra-nel-polo-spazi.png"
+          imageAlt="Spazi interni del Polo della Qualità"
           imagePosition="right"
           link={{ label: "CANDIDATI ORA", href: "#candidati" }}
         />
       </div>
+
+      <section
+        aria-label="Gli spazi del Polo della Qualità"
+        className="relative h-[55vh] min-h-[420px] w-full overflow-hidden"
+      >
+        <Image
+          src="/images/entra-nel-polo-galleria.png"
+          alt="Galleria interna del Polo della Qualità"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/35" />
+      </section>
 
       <TextListSection
         title={"PERCHÉ ENTRARE NEL\nPOLO"}

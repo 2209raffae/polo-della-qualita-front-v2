@@ -391,9 +391,6 @@ function ContentSection({ section }: { section: DocumentSection }) {
           {section.id === "candidature" ? (
             <div className="mt-8 flex flex-wrap gap-3">
               <DocumentButton href="/diventa-manager" primary>
-                Candidati come Direttore Generale
-              </DocumentButton>
-              <DocumentButton href="/diventa-manager">
                 Candidati come Manager di Distretto
               </DocumentButton>
               <DocumentButton href="/entra-nel-polo">Manifesta interesse come Partner</DocumentButton>
@@ -433,7 +430,6 @@ export default function FoundationHome() {
               Leggi il Documento
             </DocumentButton>
             <DocumentButton href="/scopri-il-polo">Scopri il Polo</DocumentButton>
-            <DocumentButton href="/diventa-manager">Candidati come Direttore Generale</DocumentButton>
             <DocumentButton href="/diventa-manager">Candidati come Manager di Distretto</DocumentButton>
             <DocumentButton href="/entra-nel-polo">Proponi il tuo progetto</DocumentButton>
           </div>
