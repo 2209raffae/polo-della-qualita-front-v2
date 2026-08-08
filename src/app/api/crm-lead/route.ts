@@ -1,16 +1,18 @@
 type LeadRequest = {
-  leadType?: "contact" | "event";
+  leadType?: "contact" | "event" | "manager";
   email?: string;
   phone?: string;
   firstName?: string;
   lastName?: string;
   message?: string;
+  documentUrl?: string;
   crmTitle?: string;
 };
 
 const leadTitles: Record<NonNullable<LeadRequest["leadType"]>, string> = {
   contact: "Richiesta candidatura MANAGER",
   event: "Richiesta proposta evento",
+  manager: "Candidatura Manager di Settore",
 };
 
 function formatCrmDate(date: Date) {
@@ -27,13 +29,30 @@ function compact(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
 }
 
+function isValidHttpUrl(value: string) {
+  try {
+    const url = new URL(value);
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
 function buildMessage(lead: LeadRequest) {
   const rows = [
     ["Nome", `${compact(lead.firstName)} ${compact(lead.lastName)}`.trim()],
     ["Email", compact(lead.email)],
     ["Telefono", compact(lead.phone)],
     ["Messaggio", compact(lead.message)],
-    ["Origine", lead.leadType === "event" ? "Form Eventi" : "Form Sito"],
+    ["Curriculum / Company profile", compact(lead.documentUrl)],
+    [
+      "Origine",
+      lead.leadType === "event"
+        ? "Form Eventi"
+        : lead.leadType === "manager"
+          ? "Form Manager di Settore"
+          : "Form Sito",
+    ],
   ];
 
   return rows
@@ -64,12 +83,25 @@ export async function POST(request: Request) {
   const firstName = compact(lead.firstName);
   const lastName = compact(lead.lastName);
   const email = compact(lead.email);
+  const documentUrl = compact(lead.documentUrl);
 
   if (!firstName || !lastName || !email) {
     return Response.json({ error: "Nome, cognome ed email sono obbligatori" }, { status: 400 });
   }
 
-  const leadType = lead.leadType === "event" ? "event" : "contact";
+  if (lead.leadType === "manager" && !isValidHttpUrl(documentUrl)) {
+    return Response.json(
+      { error: "Inserisci un link valido al curriculum o al company profile" },
+      { status: 400 },
+    );
+  }
+
+  const leadType =
+    lead.leadType === "event"
+      ? "event"
+      : lead.leadType === "manager"
+        ? "manager"
+        : "contact";
   const crmTitle = compact(lead.crmTitle) || leadTitles[leadType];
   const crmPayload = {
     pBODY: {

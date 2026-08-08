@@ -3,7 +3,7 @@
 import { FormEvent, useState } from "react";
 
 type LeadFormProps = {
-  leadType: "contact" | "event";
+  leadType: "contact" | "event" | "manager";
   crmTitle?: string;
 };
 
@@ -25,6 +25,7 @@ export default function LeadForm({ leadType, crmTitle }: LeadFormProps) {
       firstName: String(formData.get("firstName") || ""),
       lastName: String(formData.get("lastName") || ""),
       message: String(formData.get("message") || ""),
+      documentUrl: String(formData.get("documentUrl") || ""),
       crmTitle: crmTitle || "",
     };
 
@@ -42,7 +43,11 @@ export default function LeadForm({ leadType, crmTitle }: LeadFormProps) {
 
       form.reset();
       setStatus("success");
-      setMessage("Richiesta inviata correttamente.");
+      setMessage(
+        leadType === "manager"
+          ? "Candidatura inviata correttamente."
+          : "Richiesta inviata correttamente.",
+      );
     } catch (error) {
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "Non è stato possibile inviare la richiesta.");
@@ -106,6 +111,30 @@ export default function LeadForm({ leadType, crmTitle }: LeadFormProps) {
         ></textarea>
       </div>
 
+      {leadType === "manager" ? (
+        <div className="flex flex-col">
+          <label
+            htmlFor="manager-document-url"
+            className="mb-3 text-[9px] font-bold uppercase tracking-[0.15em] text-black"
+          >
+            Curriculum o company profile
+          </label>
+          <input
+            id="manager-document-url"
+            name="documentUrl"
+            type="url"
+            placeholder="Link al documento (Drive, Dropbox o sito personale)"
+            required
+            maxLength={2048}
+            aria-describedby="manager-document-help"
+            className="w-full border-b border-gray-200 bg-transparent pb-3 text-sm font-light transition-colors placeholder:text-gray-300 focus:border-black focus:outline-none"
+          />
+          <p id="manager-document-help" className="mt-3 text-xs font-light leading-relaxed text-gray-500">
+            Inserisci un link accessibile al tuo curriculum o al company profile.
+          </p>
+        </div>
+      ) : null}
+
       <div className="mt-6 flex flex-col items-end gap-4">
         {message ? (
           <p className={`text-sm ${status === "success" ? "text-green-700" : "text-red-700"}`} role="status">
@@ -117,7 +146,11 @@ export default function LeadForm({ leadType, crmTitle }: LeadFormProps) {
           disabled={status === "sending"}
           className="bg-black hover:bg-gray-800 disabled:bg-gray-500 text-white text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase px-12 py-5 transition-colors cursor-pointer disabled:cursor-wait"
         >
-          {status === "sending" ? "Invio..." : "Invia Messaggio"}
+          {status === "sending"
+            ? "Invio..."
+            : leadType === "manager"
+              ? "Invia candidatura"
+              : "Invia Messaggio"}
         </button>
       </div>
     </form>

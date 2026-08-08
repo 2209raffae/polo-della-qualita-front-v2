@@ -1,61 +1,46 @@
+import type { Metadata } from "next";
 import Header from "@/components/layout/Header";
 import DistrettoHero from "@/components/ui/DistrettoHero";
-import SplitFeatureSection from "@/components/ui/SplitFeatureSection";
-import TextListSection from "@/components/ui/TextListSection";
+import ManagerOffer from "@/components/ui/ManagerOffer";
 import ContactSection from "@/components/ui/ContactSection";
 import Footer from "@/components/layout/Footer";
+
+export const metadata: Metadata = {
+  title: "Diventa Manager di Distretto | Polo della Qualità",
+  description:
+    "Il Polo della Qualità seleziona Manager di Settore e società di commercializzazione per lo sviluppo dei comparti strategici del progetto.",
+};
 
 export default function DiventaManagerPage() {
   return (
     <main className="relative min-h-screen bg-polo-dark">
-      {/* HEADER GLOBALE TRASPARENTE */}
       <Header />
-      
-      {/* HERO SECTION SPECIFICO PER DIVENTA MANAGER */}
-      <DistrettoHero 
+
+      <DistrettoHero
         breadcrumbs={[
           { label: "Home", href: "/" },
-          { label: "Diventa Manager", href: "/diventa-manager" }
+          { label: "Diventa Manager", href: "/diventa-manager" },
         ]}
         title="DIVENTA MANAGER DI DISTRETTO"
-        description="Partecipa allo sviluppo del Polo della Qualità e contribuisci alla crescita dei suoi distretti tematici."
+        description="Il Polo della Qualità seleziona Manager di Settore, professionisti qualificati e società di commercializzazione pronti a contribuire allo sviluppo dei comparti strategici del progetto."
         imageSrc="/images/diventa-manager-bg.png"
         links={[
-          { label: "CANDIDATI ORA", href: "#" },
-          { label: "SCOPRI DI PIÙ", href: "#" }
+          { label: "CANDIDATI ORA", href: "#candidati" },
+          { label: "SCOPRI DI PIÙ", href: "#annuncio" },
         ]}
         hideBottomBar={true}
       />
 
-      {/* SEZIONE UNA NUOVA OPPORTUNITÀ */}
-      <SplitFeatureSection 
-        title="UNA NUOVA OPPORTUNITÀ PER PROFESSIONISTI CON RELAZIONI E VISIONE"
-        description="Il progetto è rivolto a figure che conoscono un settore, ne comprendono le dinamiche e hanno la capacità di creare connessioni concrete."
-        imageSrc="/images/manager-ruolo.jpg"
-        imageAlt="Manager al telefono"
-        imagePosition="right"
-        link={{ label: "CANDIDATI ORA", href: "#" }}
-      />
+      <ManagerOffer />
 
-      {/* SEZIONE LISTA: IL RUOLO DEL MANAGER */}
-      <TextListSection 
-        title={"IL RUOLO DEL MANAGER\nDI DISTRETTO"}
-        link={{ label: "CANDIDATI ORA", href: "#" }}
-        listItems={[
-          "individuare operatori e brand coerenti con il distretto;",
-          "attivare relazioni commerciali qualificate;",
-          "favorire incontri, call e sopralluoghi;",
-          "supportare la selezione delle attività da inserire;",
-          "contribuire alla definizione delle opportunità del distretto;",
-          "raccogliere indicazioni dal mercato;",
-          "collaborare con la proprietà e il team marketing nella valorizzazione del progetto."
-        ]}
-      />
+      <div id="candidati" className="scroll-mt-0">
+        <ContactSection
+          title="CANDIDATI"
+          crmTitle="Candidatura Manager di Settore"
+          leadType="manager"
+        />
+      </div>
 
-      {/* SEZIONE CONTATTO / CANDIDATI */}
-      <ContactSection title="CANDIDATI" />
-
-      {/* FOOTER GLOBALE */}
       <Footer />
     </main>
   );

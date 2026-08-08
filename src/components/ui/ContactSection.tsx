@@ -6,9 +6,14 @@ import LeadForm from "@/components/ui/LeadForm";
 interface ContactSectionProps {
   title?: string;
   crmTitle?: string;
+  leadType?: "contact" | "manager";
 }
 
-export default function ContactSection({ title = "CONTATTACI", crmTitle }: ContactSectionProps) {
+export default function ContactSection({
+  title = "CONTATTACI",
+  crmTitle,
+  leadType = "contact",
+}: ContactSectionProps) {
   return (
     <section className="w-full bg-[#f4f4f4] text-polo-dark py-16 md:py-32 px-6 md:px-16">
       <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12">
@@ -49,7 +54,7 @@ export default function ContactSection({ title = "CONTATTACI", crmTitle }: Conta
             transition={{ duration: 0.6 }}
             className="bg-white p-6 md:p-14 lg:p-20 w-full shadow-sm"
           >
-            <LeadForm leadType="contact" crmTitle={crmTitle || title} />
+            <LeadForm leadType={leadType} crmTitle={crmTitle || title} />
           </motion.div>
         </div>
       </div>
