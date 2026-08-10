@@ -1,15 +1,18 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useId, useState } from "react";
 
 type LeadFormProps = {
   leadType: "contact" | "event" | "manager";
   crmTitle?: string;
 };
 
+const MAX_CURRICULUM_SIZE = 5 * 1024 * 1024;
+
 export default function LeadForm({ leadType, crmTitle }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const curriculumInputId = useId();
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -17,23 +20,22 @@ export default function LeadForm({ leadType, crmTitle }: LeadFormProps) {
     setStatus("sending");
     setMessage("");
 
-    const formData = new FormData(event.currentTarget);
-    const payload = {
-      leadType,
-      email: String(formData.get("email") || ""),
-      phone: String(formData.get("phone") || ""),
-      firstName: String(formData.get("firstName") || ""),
-      lastName: String(formData.get("lastName") || ""),
-      message: String(formData.get("message") || ""),
-      documentUrl: String(formData.get("documentUrl") || ""),
-      crmTitle: crmTitle || "",
-    };
+    const formData = new FormData(form);
+    const curriculum = formData.get("curriculum");
+
+    if (curriculum instanceof File && curriculum.size > MAX_CURRICULUM_SIZE) {
+      setStatus("error");
+      setMessage("Il curriculum non può superare 5 MB.");
+      return;
+    }
+
+    formData.set("leadType", leadType);
+    formData.set("crmTitle", crmTitle || "");
 
     try {
       const response = await fetch("/api/crm-lead", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: formData,
       });
       const result = await response.json().catch(() => null);
 
@@ -55,7 +57,7 @@ export default function LeadForm({ leadType, crmTitle }: LeadFormProps) {
   }
 
   return (
-    <form className="flex flex-col gap-12" onSubmit={handleSubmit}>
+    <form className="flex flex-col gap-12" encType="multipart/form-data" onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
         <div className="flex flex-col">
           <label className="text-[9px] font-bold tracking-[0.15em] uppercase text-black mb-3">Email</label>
@@ -111,29 +113,25 @@ export default function LeadForm({ leadType, crmTitle }: LeadFormProps) {
         ></textarea>
       </div>
 
-      {leadType === "manager" ? (
-        <div className="flex flex-col">
-          <label
-            htmlFor="manager-document-url"
-            className="mb-3 text-[9px] font-bold uppercase tracking-[0.15em] text-black"
-          >
-            Curriculum o company profile
-          </label>
-          <input
-            id="manager-document-url"
-            name="documentUrl"
-            type="url"
-            placeholder="Link al documento (Drive, Dropbox o sito personale)"
-            required
-            maxLength={2048}
-            aria-describedby="manager-document-help"
-            className="w-full border-b border-gray-200 bg-transparent pb-3 text-sm font-light transition-colors placeholder:text-gray-300 focus:border-black focus:outline-none"
-          />
-          <p id="manager-document-help" className="mt-3 text-xs font-light leading-relaxed text-gray-500">
-            Inserisci un link accessibile al tuo curriculum o al company profile.
-          </p>
-        </div>
-      ) : null}
+      <div className="flex flex-col">
+        <label
+          htmlFor={curriculumInputId}
+          className="mb-3 text-[9px] font-bold uppercase tracking-[0.15em] text-black"
+        >
+          Curriculum <span className="font-light normal-case tracking-normal text-gray-400">(facoltativo)</span>
+        </label>
+        <input
+          id={curriculumInputId}
+          name="curriculum"
+          type="file"
+          accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          aria-describedby={`${curriculumInputId}-help`}
+          className="w-full border-b border-gray-200 bg-transparent pb-3 text-sm font-light text-gray-600 file:mr-4 file:border-0 file:bg-black file:px-4 file:py-2 file:text-[9px] file:font-bold file:uppercase file:tracking-[0.15em] file:text-white hover:file:bg-gray-800 focus:outline-none"
+        />
+        <p id={`${curriculumInputId}-help`} className="mt-3 text-xs font-light leading-relaxed text-gray-500">
+          Formati accettati: PDF, DOC o DOCX. Dimensione massima: 5 MB.
+        </p>
+      </div>
 
       <div className="mt-6 flex flex-col items-end gap-4">
         {message ? (

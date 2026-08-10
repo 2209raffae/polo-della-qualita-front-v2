@@ -32,6 +32,12 @@ const activities = [
 export default function ManagerOffer() {
   const [isExpanded, setIsExpanded] = useState(false);
 
+  function collapseOffer() {
+    setIsExpanded(false);
+    window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+    document.getElementById("annuncio")?.scrollIntoView({ block: "start" });
+  }
+
   useEffect(() => {
     function expandFromHash() {
       if (window.location.hash === "#annuncio") {
@@ -98,12 +104,23 @@ export default function ManagerOffer() {
             ))}
           </ul>
 
-          <a
-            href="#candidati"
-            className="mt-14 inline-flex items-center gap-3 border-b border-black pb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-black transition-colors hover:border-black/40 hover:text-black/60 md:text-xs"
-          >
-            Candidati ora <span aria-hidden="true">→</span>
-          </a>
+          <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-6">
+            <a
+              href="#candidati"
+              className="inline-flex items-center gap-3 border-b border-black pb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-black transition-colors hover:border-black/40 hover:text-black/60 md:text-xs"
+            >
+              Candidati ora <span aria-hidden="true">→</span>
+            </a>
+            <button
+              type="button"
+              onClick={collapseOffer}
+              aria-expanded="true"
+              aria-controls="annuncio-completo"
+              className="inline-flex cursor-pointer items-center gap-3 border-b border-black/40 pb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-black/65 transition-colors hover:border-black hover:text-black md:text-xs"
+            >
+              Mostra meno <span aria-hidden="true">↑</span>
+            </button>
+          </div>
         </div>
       </article>
     </section>
