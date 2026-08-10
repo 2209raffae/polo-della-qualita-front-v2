@@ -23,7 +23,13 @@ export default function LeadForm({ leadType, crmTitle }: LeadFormProps) {
     const formData = new FormData(form);
     const curriculum = formData.get("curriculum");
 
-    if (curriculum instanceof File && curriculum.size > MAX_CURRICULUM_SIZE) {
+    if (!(curriculum instanceof File) || curriculum.size === 0) {
+      setStatus("error");
+      setMessage("Il curriculum è obbligatorio.");
+      return;
+    }
+
+    if (curriculum.size > MAX_CURRICULUM_SIZE) {
       setStatus("error");
       setMessage("Il curriculum non può superare 5 MB.");
       return;
@@ -118,13 +124,14 @@ export default function LeadForm({ leadType, crmTitle }: LeadFormProps) {
           htmlFor={curriculumInputId}
           className="mb-3 text-[9px] font-bold uppercase tracking-[0.15em] text-black"
         >
-          Curriculum <span className="font-light normal-case tracking-normal text-gray-400">(facoltativo)</span>
+          Curriculum
         </label>
         <input
           id={curriculumInputId}
           name="curriculum"
           type="file"
           accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+          required
           aria-describedby={`${curriculumInputId}-help`}
           className="w-full border-b border-gray-200 bg-transparent pb-3 text-sm font-light text-gray-600 file:mr-4 file:border-0 file:bg-black file:px-4 file:py-2 file:text-[9px] file:font-bold file:uppercase file:tracking-[0.15em] file:text-white hover:file:bg-gray-800 focus:outline-none"
         />

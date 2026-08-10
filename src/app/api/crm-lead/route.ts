@@ -180,6 +180,10 @@ export async function POST(request: Request) {
       throw new RequestError("Il link al curriculum non è valido.", 400);
     }
 
+    if (!curriculum && !legacyDocumentUrl) {
+      throw new RequestError("Il curriculum è obbligatorio.", 400);
+    }
+
     let curriculumUrl = legacyDocumentUrl;
 
     if (curriculum) {
