@@ -17,11 +17,17 @@ function getMongoUri() {
 function getMongoClient() {
   if (!globalForMongo.poloMongoClientPromise) {
     const client = new MongoClient(getMongoUri(), {
+      maxIdleTimeMS: 30_000,
+      maxPoolSize: 5,
       promoteBuffers: true,
       serverSelectionTimeoutMS: 10_000,
     });
 
-    globalForMongo.poloMongoClientPromise = client.connect();
+    globalForMongo.poloMongoClientPromise = client.connect().catch(async (error) => {
+      globalForMongo.poloMongoClientPromise = undefined;
+      await client.close().catch(() => undefined);
+      throw error;
+    });
   }
 
   return globalForMongo.poloMongoClientPromise;
