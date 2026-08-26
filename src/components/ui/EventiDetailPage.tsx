@@ -4,6 +4,8 @@ import DistrettoHero from "@/components/ui/DistrettoHero";
 import SplitFeatureSection from "@/components/ui/SplitFeatureSection";
 import GridFeaturesSection from "@/components/ui/GridFeaturesSection";
 import EventContactSection from "@/components/ui/EventContactSection";
+import DistrictFoundationExcerpt from "@/components/ui/DistrictFoundationExcerpt";
+import { districtFoundationContent } from "@/data/district-foundation-content";
 
 export default function EventiDetailPage() {
   return (
@@ -23,6 +25,11 @@ export default function EventiDetailPage() {
           { label: "SCOPRI DI PI\u00d9", href: "#scopri-di-piu" },
         ]}
         hideBottomBar={true}
+      />
+
+      <DistrictFoundationExcerpt
+        districtTitle="Distretto Eventi & Intrattenimento"
+        paragraphs={districtFoundationContent.eventi}
       />
 
       <div id="scopri-di-piu">

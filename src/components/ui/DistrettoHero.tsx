@@ -101,7 +101,7 @@ export default function DistrettoHero({ breadcrumbs, title, description, videoSr
             <span className="border-b border-black pb-0.5">DIVENTA MANAGER</span>
           </Link>
           <Link href="/entra-nel-polo" className="flex-1 bg-[#9c9c9c] hover:bg-[#858585] text-black text-[10px] md:text-xs font-bold tracking-[0.15em] uppercase py-4 text-center transition-colors">
-            <span className="border-b border-black pb-0.5">PROPONI IL TUO PROGETTO</span>
+            <span className="border-b border-black pb-0.5">PROPONI IL TUO BUSINESS</span>
           </Link>
         </div>
       )}

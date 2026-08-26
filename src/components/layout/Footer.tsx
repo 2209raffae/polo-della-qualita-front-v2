@@ -48,7 +48,7 @@ export default function Footer() {
           <h3 className="text-sm md:text-base font-bold tracking-widest uppercase mb-8">Link Rapidi</h3>
           <ul className="flex flex-col gap-4">
             <li><Link href="/diventa-manager" className={linkClass}>Diventa Manager</Link></li>
-            <li><Link href="/entra-nel-polo" className={linkClass}>Proponi il tuo progetto</Link></li>
+            <li><Link href="/entra-nel-polo" className={linkClass}>Proponi il tuo business</Link></li>
             <li><Link href="/eventi" className={linkClass}>Events</Link></li>
           </ul>
         </div>

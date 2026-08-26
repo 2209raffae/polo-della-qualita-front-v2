@@ -2,14 +2,24 @@
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import {
+  districtFoundationContent,
+  type FoundationDistrictKey,
+} from "@/data/district-foundation-content";
 
 type DistrictConstructionBannerProps = {
-  title?: string;
+  title: string;
+  districtKey: FoundationDistrictKey;
   imageSrc?: string;
 };
 
-export default function DistrictConstructionBanner({ title, imageSrc }: DistrictConstructionBannerProps) {
+export default function DistrictConstructionBanner({
+  title,
+  districtKey,
+  imageSrc,
+}: DistrictConstructionBannerProps) {
   const router = useRouter();
+  const paragraphs = districtFoundationContent[districtKey];
 
   function handleBack() {
     if (typeof window !== "undefined" && window.history.length > 1) {
@@ -26,7 +36,7 @@ export default function DistrictConstructionBanner({ title, imageSrc }: District
         <>
           <Image
             src={imageSrc}
-            alt={title ?? "Distretto"}
+            alt={title}
             fill
             sizes="100vw"
             priority
@@ -37,13 +47,21 @@ export default function DistrictConstructionBanner({ title, imageSrc }: District
         </>
       ) : null}
 
-      <section className="relative z-10 w-full max-w-3xl px-0 py-12 text-center md:py-16">
+      <section className="relative z-10 w-full max-w-4xl px-0 py-12 text-center md:py-16">
         <p className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-[#c8a45d]">
-          {title ?? "Distretto"}
+          {title}
         </p>
         <h1 className="font-serif text-4xl font-medium leading-tight md:text-6xl">
           Pagina in costruzione
         </h1>
+        <div className="mx-auto mt-8 max-w-3xl space-y-4 text-base leading-relaxed text-[#d8d2c4] md:text-lg">
+          <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#c8a45d]">
+            Dal Documento Fondativo Ufficiale
+          </p>
+          {paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
         <button
           type="button"
           onClick={handleBack}

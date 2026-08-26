@@ -4,8 +4,10 @@ import AlternatingFeaturesSection from "@/components/ui/AlternatingFeaturesSecti
 import CallToActionSection from "@/components/ui/CallToActionSection";
 import ContactSection from "@/components/ui/ContactSection";
 import DistrettoHero from "@/components/ui/DistrettoHero";
+import DistrictFoundationExcerpt from "@/components/ui/DistrictFoundationExcerpt";
 import FeatureImageSection from "@/components/ui/FeatureImageSection";
 import TextWithGallerySection from "@/components/ui/TextWithGallerySection";
+import { districtFoundationContent } from "@/data/district-foundation-content";
 import type { DistrictSlug } from "@/data/districts";
 import { getDistrict } from "@/data/districts";
 
@@ -32,8 +34,13 @@ export default function DistrictDetailPage({ slug }: { slug: DistrictSlug }) {
         hideBottomBar={true}
         links={[
           { label: "DIVENTA MANAGER", href: "/diventa-manager" },
-          { label: "PROPONI IL TUO PROGETTO", href: "/entra-nel-polo" },
+          { label: "PROPONI IL TUO BUSINESS", href: "/entra-nel-polo" },
         ]}
+      />
+
+      <DistrictFoundationExcerpt
+        districtTitle={`Distretto ${district.menuLabel}`}
+        paragraphs={districtFoundationContent[district.slug]}
       />
 
       <TextWithGallerySection
@@ -48,7 +55,7 @@ export default function DistrictDetailPage({ slug }: { slug: DistrictSlug }) {
         imageSrc={district.featureImage}
         links={[
           { label: "DIVENTA MANAGER", href: "/diventa-manager" },
-          { label: "PROPONI IL TUO PROGETTO", href: "/entra-nel-polo" },
+          { label: "PROPONI IL TUO BUSINESS", href: "/entra-nel-polo" },
         ]}
       />
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { districtFoundationContent } from "@/data/district-foundation-content";
 
 type ContentBlock =
   | { type: "heading"; text: string }
@@ -20,10 +21,7 @@ const distretti = [
     num: "01",
     title: "Distretto Eventi & Intrattenimento",
     href: "/eventi",
-    paragraphs: [
-      "Il Distretto Eventi & Intrattenimento sar\u00e0 dedicato allo sviluppo di attivit\u00e0 permanenti, fiere, manifestazioni, eventi fisici e digitali, congressi, iniziative culturali, spettacoli, experience economy e momenti di networking.",
-      "L'obiettivo \u00e8 rendere il Polo della Qualit\u00e0 un luogo vivo durante tutto l'anno, capace di attrarre pubblico, imprese, professionisti, buyer, visitatori e stakeholder qualificati.",
-    ],
+    paragraphs: districtFoundationContent.eventi,
     chips: [
       "Eventi permanenti",
       "Fiere permanenti",
@@ -44,10 +42,7 @@ const distretti = [
     num: "02",
     title: "Distretto Italiano del Gusto",
     href: "/distretti/italiano-del-gusto",
-    paragraphs: [
-      "Il Distretto Italiano del Gusto sar\u00e0 dedicato alla valorizzazione delle eccellenze agroalimentari italiane, delle produzioni territoriali, delle cantine, della ristorazione, delle esperienze enogastronomiche e delle filiere del Made in Italy alimentare.",
-      "L'obiettivo \u00e8 creare una piattaforma permanente capace di integrare esposizione fisica, vendita digitale, degustazioni, formazione, turismo, export e promozione dei prodotti italiani.",
-    ],
+    paragraphs: districtFoundationContent["italiano-del-gusto"],
     chips: [
       "Food Experience",
       "Prodotti tipici agroalimentari nazionali",
@@ -67,10 +62,7 @@ const distretti = [
     num: "03",
     title: "Distretto Moda & Lusso",
     href: "/distretti/moda-lusso",
-    paragraphs: [
-      "Il Distretto Moda & Lusso sar\u00e0 dedicato alle eccellenze italiane e internazionali nei settori moda, gioielleria, accessori, wedding, design, mobilit\u00e0 premium, nautica e retail omnicanale di qualit\u00e0.",
-      "L'obiettivo \u00e8 sviluppare un ambiente esclusivo, esperienziale e commerciale, capace di attrarre brand, operatori, clienti, partner e investitori interessati al mondo del lusso, dello stile e della qualit\u00e0.",
-    ],
+    paragraphs: districtFoundationContent["moda-lusso"],
     chips: [
       "Gioielleria",
       "Orologeria",
@@ -90,10 +82,7 @@ const distretti = [
     num: "04",
     title: "Distretto Istruzione & Formazione",
     href: "/distretti/istruzione-formazione",
-    paragraphs: [
-      "Il Distretto Istruzione & Formazione sar\u00e0 dedicato allo sviluppo delle competenze, alla formazione professionale, alla formazione manageriale, alle academy, alle universit\u00e0 private, alle scuole specialistiche e ai percorsi collegati all'innovazione digitale.",
-      "L'obiettivo \u00e8 creare un polo formativo permanente capace di collegare imprese, giovani, professionisti, universit\u00e0, startup e nuove competenze richieste dal mercato.",
-    ],
+    paragraphs: districtFoundationContent["istruzione-formazione"],
     chips: [
       "Universit\u00e0 private",
       "Academy",
@@ -111,10 +100,7 @@ const distretti = [
     num: "05",
     title: "Distretto Salute & Benessere",
     href: "/distretti/salute-benessere",
-    paragraphs: [
-      "Il Distretto Salute & Benessere sar\u00e0 dedicato alla qualit\u00e0 della vita, alla prevenzione, alla longevit\u00e0, al wellness, alla medicina specialistica, alla salute digitale, alla nutrizione, al recupero fisico, alla medicina estetica e ai servizi sanitari avanzati.",
-      "L'obiettivo \u00e8 creare un ecosistema integrato per la persona, nel quale salute, benessere, prevenzione, tecnologia e stile di vita possano convivere in un modello organizzato e accessibile.",
-    ],
+    paragraphs: districtFoundationContent["salute-benessere"],
     chips: [
       "Longevity Clinic",
       "Wellness Center",
@@ -133,10 +119,7 @@ const distretti = [
     num: "06",
     title: "Distretto Comunit\u00e0 Energetiche",
     href: "/distretti/comunita-energetiche",
-    paragraphs: [
-      "Il Distretto Comunit\u00e0 Energetiche sar\u00e0 dedicato alla sostenibilit\u00e0 energetica, alla produzione e condivisione di energia rinnovabile, all'efficientamento, alla mobilit\u00e0 elettrica e alla gestione intelligente dei consumi.",
-      "L'obiettivo \u00e8 rendere il Polo della Qualit\u00e0 un ecosistema energeticamente evoluto, capace di ridurre i costi, migliorare la sostenibilit\u00e0 ambientale e creare benefici per le attivit\u00e0 aderenti e per il territorio.",
-    ],
+    paragraphs: districtFoundationContent["comunita-energetiche"],
     chips: [
       "Comunit\u00e0 Energetiche Rinnovabili (CER)",
       "Produzione di energia",
@@ -431,7 +414,7 @@ export default function FoundationHome() {
             </DocumentButton>
             <DocumentButton href="/scopri-il-polo">Scopri il Polo</DocumentButton>
             <DocumentButton href="/diventa-manager">Candidati come Manager di Distretto</DocumentButton>
-            <DocumentButton href="/entra-nel-polo">Proponi il tuo progetto</DocumentButton>
+            <DocumentButton href="/entra-nel-polo">Proponi il tuo business</DocumentButton>
           </div>
         </div>
       </section>
@@ -535,4 +518,3 @@ export default function FoundationHome() {
     </main>
   );
 }
-
