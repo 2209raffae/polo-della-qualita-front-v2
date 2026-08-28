@@ -6,6 +6,40 @@ export type FoundationDistrictKey =
   | "salute-benessere"
   | "comunita-energetiche";
 
+// Shared by the founding document and the individual district pages.
+export const districtFoundationSectors = {
+  eventi: [
+    "Eventi permanenti", "Fiere permanenti", "Eventi digitali", "Congressi",
+    "Convention", "Temporary showroom", "Showroom permanenti", "Experience economy",
+    "Eventi aziendali", "Eventi culturali", "Spettacoli", "Intrattenimento", "Networking Business",
+  ],
+  "italiano-del-gusto": [
+    "Food Experience", "Prodotti tipici agroalimentari nazionali", "Cantine italiane",
+    "Oleifici", "Caseifici", "Pasticceria artigianale", "Ristorazione", "Cucina regionale",
+    "Cooking Academy", "Degustazioni", "Export agroalimentare", "Marketplace Food",
+  ],
+  "moda-lusso": [
+    "Gioielleria", "Orologeria", "Moda", "Accessori", "Pelletteria", "Wedding District",
+    "Luxury Experience", "Design", "Arredamento Luxury", "Automotive Premium",
+    "Nautica Premium", "Retail omnicanale",
+  ],
+  "istruzione-formazione": [
+    "Università private", "Academy", "AI & Digital School", "Business School",
+    "Hospitality School", "Luxury School", "Scuole professionali", "Formazione continua",
+    "Formazione manageriale", "Incubazione startup",
+  ],
+  "salute-benessere": [
+    "Longevity Clinic", "Wellness Center", "Fitness Premium", "Lifestyle Club", "Nutrizione",
+    "Medicina preventiva", "Medicina estetica", "Health Tech", "Telemedicina", "Diagnostica",
+    "Poliambulatori specialistici",
+  ],
+  "comunita-energetiche": [
+    "Comunità Energetiche Rinnovabili (CER)", "Produzione di energia", "Condivisione energetica",
+    "Accumulo", "Efficientamento energetico", "Mobilità elettrica", "Colonnine di ricarica",
+    "Smart Grid", "Gestione energetica", "Sostenibilità ambientale",
+  ],
+} as const satisfies Record<FoundationDistrictKey, readonly string[]>;
+
 export const districtFoundationContent = {
   eventi: [
     "Il Distretto Eventi & Intrattenimento sar\u00e0 dedicato allo sviluppo di attivit\u00e0 permanenti, fiere, manifestazioni, eventi fisici e digitali, congressi, iniziative culturali, spettacoli, experience economy e momenti di networking.",

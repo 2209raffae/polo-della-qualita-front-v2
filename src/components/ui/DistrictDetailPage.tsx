@@ -7,7 +7,7 @@ import DistrettoHero from "@/components/ui/DistrettoHero";
 import DistrictFoundationExcerpt from "@/components/ui/DistrictFoundationExcerpt";
 import FeatureImageSection from "@/components/ui/FeatureImageSection";
 import TextWithGallerySection from "@/components/ui/TextWithGallerySection";
-import { districtFoundationContent } from "@/data/district-foundation-content";
+import { districtFoundationContent, districtFoundationSectors } from "@/data/district-foundation-content";
 import type { DistrictSlug } from "@/data/districts";
 import { getDistrict } from "@/data/districts";
 
@@ -41,6 +41,7 @@ export default function DistrictDetailPage({ slug }: { slug: DistrictSlug }) {
       <DistrictFoundationExcerpt
         districtTitle={`Distretto ${district.menuLabel}`}
         paragraphs={districtFoundationContent[district.slug]}
+        sectors={districtFoundationSectors[district.slug]}
       />
 
       <TextWithGallerySection

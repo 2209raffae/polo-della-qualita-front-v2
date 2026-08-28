@@ -1,11 +1,15 @@
+import DistrictSectors from "@/components/ui/DistrictSectors";
+
 type DistrictFoundationExcerptProps = {
   districtTitle: string;
   paragraphs: readonly string[];
+  sectors: readonly string[];
 };
 
 export default function DistrictFoundationExcerpt({
   districtTitle,
   paragraphs,
+  sectors,
 }: DistrictFoundationExcerptProps) {
   return (
     <section className="border-y border-[#c8a45d]/25 bg-[#0b0b0b] text-white">
@@ -22,6 +26,7 @@ export default function DistrictFoundationExcerpt({
           {paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+          <DistrictSectors sectors={sectors} />
         </div>
       </div>
     </section>

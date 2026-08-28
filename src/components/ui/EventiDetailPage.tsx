@@ -5,7 +5,7 @@ import SplitFeatureSection from "@/components/ui/SplitFeatureSection";
 import GridFeaturesSection from "@/components/ui/GridFeaturesSection";
 import EventContactSection from "@/components/ui/EventContactSection";
 import DistrictFoundationExcerpt from "@/components/ui/DistrictFoundationExcerpt";
-import { districtFoundationContent } from "@/data/district-foundation-content";
+import { districtFoundationContent, districtFoundationSectors } from "@/data/district-foundation-content";
 
 export default function EventiDetailPage() {
   return (
@@ -30,6 +30,7 @@ export default function EventiDetailPage() {
       <DistrictFoundationExcerpt
         districtTitle="Distretto Eventi & Intrattenimento"
         paragraphs={districtFoundationContent.eventi}
+        sectors={districtFoundationSectors.eventi}
       />
 
       <div id="scopri-di-piu">

@@ -1,9 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import DistrictSectors from "@/components/ui/DistrictSectors";
 import { useRouter } from "next/navigation";
 import {
   districtFoundationContent,
+  districtFoundationSectors,
   type FoundationDistrictKey,
 } from "@/data/district-foundation-content";
 
@@ -61,6 +63,9 @@ export default function DistrictConstructionBanner({
           {paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+        </div>
+        <div className="mx-auto max-w-3xl">
+          <DistrictSectors sectors={districtFoundationSectors[districtKey]} centered />
         </div>
         <button
           type="button"
